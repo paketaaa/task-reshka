@@ -37,6 +37,12 @@
                         z-index: 5;
                     }
 
+                    &__img{
+                        &::before{
+                            display: none;
+                        }
+                    }
+
                     &__content{
                         display: none;
                     }
