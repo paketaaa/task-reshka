@@ -1,0 +1,323 @@
+// Flex -----------------
+
+.df {
+    display: flex;
+}
+
+.fdc {
+    flex-direction: column;
+}
+
+.ais {
+    align-items: flex-start;
+}
+
+.aic {
+    align-items: center;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.jcfs {
+    justify-content: flex-start;
+}
+
+.fg1 {
+    flex-grow: 1;
+}
+
+.fs1 {
+    flex-shrink: 1;
+}
+
+// Margin ----------------
+
+.ma {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mla {
+    margin-left: auto;
+}
+
+.mra {
+    margin-right: auto;
+}
+
+// ------------------------------
+
+.posr {
+    position: relative;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.db {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.ovh {
+    overflow: hidden;
+}
+
+.button {
+    @include animate;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-weight: 600;
+
+    &__icon{
+        &--after{
+            margin-left: 10px;
+        }
+    }
+
+    &--l{
+        font-size: 1.8rem;
+        padding: 22px 88px;
+
+        @media (max-width: 991px) {
+            font-size: 1.6rem;
+            padding: 18px 72px;
+        }
+    }
+
+    &--m{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+
+        padding: 17.5px 32px 16.5px 32px;
+        border-radius: 13px;
+    }
+
+    &--s{
+        font-size: 1.5rem;
+        padding: 10px 62px;
+
+        @media (max-width: 991px) {
+            padding: 10px 48px;
+        }
+    }
+
+    &--lgray{
+        background: $lgray;
+        border: 1px solid #fff;
+        color: $gray;
+        fill: $gray;
+
+        &:hover,
+        &:focus{
+            filter: brightness(110%);
+        }
+
+        &:active{
+            filter: brightness(120%);
+        }
+    }
+}
+
+.sticky {
+    position: sticky !important;
+    top: 200px;
+    @include animate;
+
+    &.animated {
+        top: 180px;
+    }
+
+    &.t140 {
+        top: 140px;
+    }
+}
+
+.swiper{
+    position: relative;
+    overflow: visible;
+
+    &-container{
+        max-width: 100%;
+        position: relative;
+    }
+
+    &-slide{
+        width: auto;
+    }
+
+    &__nav{
+
+    }
+
+    &-nav{
+        @include animate;
+        @include flex-cs;
+        flex-wrap: nowrap;
+        width: max-content;
+        max-width: 100%;
+        margin-left: 91px;
+        margin-right: 91px;
+        &__inner{
+            margin-left: 24px;
+            margin: 24px;
+        }
+    }
+
+    &__pagination{
+        min-width: 60px;
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 150%;
+    }
+
+    &__progress{
+        width: 57px;
+        height: 3px;
+        border-radius: 12px;
+        background: rgba($color: #adacaf, $alpha: .4);
+        position: relative;
+        overflow: hidden;
+
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 100%;
+            background: rgba($color: #ADACAF, $alpha: .8);
+        }
+
+        &.run{
+            &::before{
+                animation: swiperProgress 4.2s ease 0s infinite normal forwards;
+            }
+        }
+    }
+
+    &-pagination{
+        &-current{
+            font-size: 3.5rem;
+            margin-right: -5px;
+        }
+
+        &-total{
+            font-size: 1.6rem;
+            margin-left: -5px;
+        }
+    }
+
+    &__prev,
+    &__next{
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        border: 2px solid rgba($color: $gray, $alpha: .5);
+        fill: rgba($color: $gray, $alpha: .5);
+
+        svg{
+            width: 35px;
+            height: 23px;
+        }
+
+        &:hover{
+            border-color: $gray;
+            fill: $gray;
+        }
+    }
+}
+
+.icon{
+    &-question{
+        width: 6px;
+        height: 9px;
+    }
+
+    &-arrow{
+        &-top{
+            &-right{
+                width: 24px;
+                height: 16px;
+            }
+        }
+    }
+}
+
+.tooltip{
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: $lgray;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Arial";
+    font-size: 1.4rem;
+    line-height: 195%;
+    text-transform: none;
+
+    cursor: pointer;
+
+    svg{
+        fill: #fff;
+    }
+
+    &:hover{
+        @include animate;
+        filter: brightness(105%);
+        .tooltip__content{
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
+    &__content{
+        @include animate;
+        position: absolute;
+        top: 0;
+        left: calc(100% + 12px);
+        width: max-content;
+        max-width: 230px;
+        padding: 7px 12px;
+
+        background: #fff;
+        border-radius: 13px;
+        overflow: hidden;
+
+        color: $gray;
+
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@keyframes swiperProgress {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 100%;
+    }
+}

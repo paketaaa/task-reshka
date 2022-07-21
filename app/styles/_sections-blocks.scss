@@ -1,0 +1,56 @@
+.section{
+    &-slider{
+        overflow: hidden;
+        padding-top: 66px;
+        padding-bottom: 30px;
+
+        &__container{
+            @include flex-cs;
+            flex-wrap: nowrap;
+        }
+
+        &__swiper{
+
+            &--main{
+                width: calc(((100% / 12) * 7) + 25px);
+                margin: 0;
+            }
+
+            &--secondary{
+                width: calc(((100% / 12) * 3) + 60px);
+                .font-50{
+                    font-size: 3rem;
+                }
+
+                .card-offer{
+                    position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 544px;
+                        height: 654px;
+
+                        background: linear-gradient(90deg, #FFFFFF 31.24%, rgba(255, 255, 255, 0) 100%);
+                        transform: matrix(-1, 0, 0, 1, 0, 0);
+
+                        left: 60px;
+                        z-index: 5;
+                    }
+
+                    &__content{
+                        display: none;
+                    }
+                }
+            }
+
+            .swiper-wrapper{
+                align-items: center;
+            }
+
+            .swiper-slide{
+                max-width: 100%;
+                margin-top: auto;
+            }
+        }
+    }
+}

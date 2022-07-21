@@ -1,0 +1,130 @@
+<!--#set var="h1" value="Подружки" -->
+<!--#include virtual="/parts/header.html" -->
+
+<!-- FIXME: Понимаю, что на странице нужен h1, но сюда h1 не лезет -->
+
+<section class="section-slider">
+    <div class="section-slider__container container">
+        <div class="section-slider__swiper swiper section-slider__swiper--main">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <article class="card-offer swiper__card card">
+                        <div class="card-offer__title offer-title">
+                            <!-- TODO: Вопрос, нужно ли жестко ограничивать ширину блока или я сделал правильно -->
+                            <h2 class="offer-title__body font-50">эпиляция бикини</h2>
+                            <div class="offer-title__subtitle font-50">6 процедур</div>
+                        </div>
+                        <div class="card-offer__inner">
+                            <div class="card-offer__img"><img src="img/card/offer/img-1.png" alt=""></div>
+                            <div class="card-offer__content">
+                                <div class="card-offer__description card-description font-20">
+                                    <div class="card-description__body">
+                                        эпиляция бикини лазером candela
+                                        <div class="tooltip card__tooltip">
+                                            <svg class="icon-question"><use xlink:href="#icon-question"></use></svg>
+                                            <div class="tooltip__content">
+                                                <p>при покупке абонемента online ваша выгода составляет 5% </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-description__body">6 процедур. стоимость 20 000 ₽</div>
+                                </div>
+                                <button type="button" class="button button--m button--lgray">
+                                    <span>купить online</span>
+                                    <svg class="button__icon--after icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="card-offer swiper__card card">
+                        <div class="card-offer__title offer-title">
+                            <h2 class="offer-title__body font-50">клубная карта сети </h2>
+                            <div class="offer-title__subtitle font-50">клиник “подружки”</div>
+                        </div>
+                        <div class="card-offer__inner">
+                            <div class="card-offer__img"><img src="img/card/offer/img-2.png" alt=""></div>
+                            <div class="card-offer__content">
+                                <button type="button" class="button button--m button--lgray">
+                                    <span>купить online</span>
+                                    <svg class="button__icon--after icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="card-offer swiper__card card">
+                        <div class="card-offer__inner">
+                            <div class="card-offer__img"><img src="img/card/offer/img-1.png" alt=""></div>
+                            <div class="card-offer__content">
+                                <div class="card-offer__description card-description font-20">
+                                    <div class="card-description__body">
+                                        эпиляция бикини лазером candela
+                                        <div class="tooltip card__tooltip">
+                                            <svg class="icon-question"><use xlink:href="#icon-question"></use></svg>
+                                            <div class="tooltip__content">
+                                                <p>при покупке абонемента online ваша выгода составляет 5% </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-description__body">9 процедур. стоимость 20 000 ₽</div>
+                                </div>
+                                <button type="button" class="button button--m button--lgray">
+                                    <span>купить online</span>
+                                    <svg class="button__icon--after icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="thumbs-nav swiper-nav">
+            <button class="swiper__prev"><svg><use xlink:href="#swiper-prev"></use></svg></button>
+            <div class="swiper-nav__inner">
+                <div class="swiper__pagination"></div>
+                <div class="swiper__progress run"></div>
+            </div>
+            <button class="swiper__next"><svg><use xlink:href="#swiper-next"></use></svg></button>
+        </div>
+        <div class="section-slider__swiper swiper section-slider__swiper--secondary">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <article class="card-offer swiper__card card">
+                        <div class="card-offer__title offer-title">
+                            <h2 class="offer-title__body font-50">клубная карта сети </h2>
+                            <div class="offer-title__subtitle font-50">клиник “подружки”</div>
+                        </div>
+                        <div class="card-offer__inner">
+                            <div class="card-offer__img"><img src="img/card/offer/img-2.png" alt=""></div>
+                        </div>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="card-offer swiper__card card">
+                        <div class="card-offer__title offer-title">
+                        </div>
+                        <div class="card-offer__inner">
+                            <div class="card-offer__img"><img src="img/card/offer/img-1.png" alt=""></div>
+                        </div>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="card-offer swiper__card card">
+                        <div class="card-offer__title offer-title">
+                            <h2 class="offer-title__body font-50">эпиляция бикини</h2>
+                            <div class="offer-title__subtitle font-50">6 процедур</div>
+                        </div>
+                        <div class="card-offer__inner">
+                            <div class="card-offer__img"><img src="img/card/offer/img-1.png" alt=""></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--#include virtual="/parts/footer.html" -->

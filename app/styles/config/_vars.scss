@@ -1,0 +1,156 @@
+// Colors
+$black: #000000;
+$blue: #5D91D9;
+$gray: #5B5A60;
+$lgray: #CDC8C9;
+
+// Fonts Setting
+$userfont: "Tenor Sans";
+
+// GRID -----------------------------------
+
+// Mobile fisrt breakpoint ---
+
+$firstXS: 577px;
+$firstMD: 768px;
+$firstLG: 992px;
+$firstXL: 1280px;
+$firstXXL: 1340px;
+$firstEXL: 1680px;
+
+// Mobile last breakpoint ---
+
+$lastXS: 576px;
+$lastMD: 767px;
+$lastLG: 991px;
+$lastXL: 1279px;
+$lastXXL: 1339px;
+$lastEXL: 1679px;
+
+@mixin font ($fz, $lh) {
+    font-size: $fz;
+    line-height: $lh;
+}
+
+@mixin font-50{
+    font-size: 5rem;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
+.font-50{
+    @include font-50()
+}
+
+@mixin font-20{
+    font-size: 2rem;
+    line-height: 130%;
+    text-transform: uppercase;
+}
+
+.font-20{
+    @include font-20()
+}
+
+// Mixin
+
+@mixin animate {
+    transition: all 0.3s ease;
+}
+
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex {
+    @include flex;
+}
+
+@mixin flex-ss {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.flex-ss {
+    @include flex-ss;
+}
+
+@mixin flex-sc {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.flex-sc {
+    @include flex-sc;
+}
+
+@mixin flex-sfe {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.flex-sfe {
+    @include flex-sfe;
+}
+
+@mixin flex-cs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.flex-cs {
+    @include flex-cs;
+}
+
+@mixin flex-cc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-cc {
+    @include flex-cc;
+}
+
+@mixin flex-cfe {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.flex-cfe {
+    @include flex-cfe;
+}
+
+@mixin flex-ssb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.flex-ssb {
+    @include flex-ssb;
+}
+
+@mixin flex-csb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-csb {
+    @include flex-csb;
+}
